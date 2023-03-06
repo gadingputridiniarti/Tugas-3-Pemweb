@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Konversi Nilai</title>
+    <link rel="stylesheet" href="Latihan 1.css">
+</head>
+
+<!--Coding Javascript-->
+<SCRIPT language="Javascript">
+    function ubah() {
+    var val1 = document.kirim.text1.value
+    if (0 < val1 && val1 <= 40)
+        document.kirim.text2.value = "E"
+    else if (val1 > 40 && val1 <= 55)
+        document.kirim.text2.value = "D"
+    else if (val1 > 55 && val1 <= 60)
+        document.kirim.text2.value = "C"
+    else if (val1 > 60 && val1 <= 65)
+        document.kirim.text2.value = "BC"
+    else if (val1 > 65 && val1 <= 70)
+        document.kirim.text2.value = "B"
+    else if (val1 > 70 && val1 <= 80)
+        document.kirim.text2.value = "AB"
+    else if (val1 > 80 && val1 <= 100)
+        document.kirim.text2.value = "A"
+}
+</SCRIPT>
+
+<!--Input konversi nilai-->
+<body>
+    <div class="center">
+        <h1>Konversi Nilai</h1>
+        <form method="post" name="kirim">
+            <div class="field">
+                <label> Nilai akhir : </label>
+                <input type="text" name="text1" required>
+            </div>
+            <div class="field">
+                <label> Nilai  : </label>
+                <input type="text" name="text2" disabled>
+            </div>
+            
+<!--Memanggi javascript untuk konvers nilai-->
+            <input type="button" value="Konversi" name="konversi" onclick=ubah()>
+        </form>
+    </div>
+    <footer>
+        <h4> &copy; Copyright GADING PUTRI DINIARTI</h3>
+    </footer>
+</body>
+</html>

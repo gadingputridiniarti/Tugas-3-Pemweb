@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="Latihan 2.css">
+</head>
+
+<!--coding javascript-->
+<script language="Javascript">
+function lmodif() {
+    document.getElementById("p1").innerHTML = "Dimodfifikasi terakhir pada " + document.lastModified;
+}
+
+function otambah() {
+    document.kirim.hasil.value = parseInt(document.kirim.text1.value) + parseInt(document.kirim.text2.value);
+    
+}
+
+function okurang() {
+    document.kirim.hasil.value = parseInt(document.kirim.text1.value) - parseInt(document.kirim.text2.value);
+    lmodif();
+}
+
+function okali() {
+    document.kirim.hasil.value = parseInt(document.kirim.text1.value) * parseInt(document.kirim.text2.value);
+    lmodif();
+}
+
+function obagi() {
+    document.kirim.hasil.value = parseInt(document.kirim.text1.value) / parseInt(document.kirim.text2.value);
+    lmodif();
+}
+
+function reset() { 
+    document.kirim.hasil.value.reset();
+}
+</script>
+
+<!--Memanggil javascript-->
+<body>
+    <div class="center">
+        <h1>Kalkulator Sederhana</h1>
+        <!--Input bilangan-->
+        <form method="post" name="kirim">
+            <div class="field">
+                <label> Bilangan Pertama : </label>
+                <input type="text" name="text1" required>
+            </div>
+            <div class="field">
+                <label> Bilangan Kedua : </label>
+                <input type="text" name="text2">
+            </div>
+            <div class="field">
+                <label> Hasil : </label>
+                <input type="text" name="hasil" disabled>
+            </div>
+            <!--Operator -->
+            <div class="tombol">
+                <input type="button" value="+" name="plus" onclick=otambah()>
+                <input type="button" value="-" name="minus" onclick=okurang()>
+                <input type="button" value="X" name="kali" onclick=okali()>
+                <input type="button" value="/" name="bagi" onclick=obagi()>
+            </div>
+            <center>
+                 <input type="button" value="reset" onclick="reset()">
+            </center>
+           
+            <p id="p1"></p>
+        </form>
+
+    </div>
+    <footer>
+        <h4> &copy; Copyright GADING PUTRI DINIARTI</h3>
+    </footer>
+</body>
+
+</html>
